@@ -3,7 +3,8 @@ registries:
   devexpress:
     type: nuget-feed
     url: https://nuget-test.devexpress.com/api
-    token: ${{secrets.DXTOKEN}}
+    username: test
+    password: ${{secrets.DXTOKEN}}
 updates:
   - package-ecosystem: "nuget"
     directory: "/"
