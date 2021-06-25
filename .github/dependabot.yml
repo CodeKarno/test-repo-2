@@ -1,4 +1,9 @@
 version: 2
+registries:
+  devexpress:
+    type: nuget-feed
+    url: https://nuget-test.devexpress.com/api
+    token: ${{secrets.DXTOKEN}}
 updates:
   - package-ecosystem: "nuget"
     directory: "/"
@@ -6,8 +11,4 @@ updates:
       interval: "daily"
     registries:
       - devexpress
-registries:
-  devexpress:
-    type: nuget-feed
-    url: https://nuget-test.devexpress.com/api
-    token: ${{secrets.DXTOKEN}}
+
